@@ -1,0 +1,223 @@
+.container {
+    background-color: var(--surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    margin-top: var(--spacing-lg);
+}
+
+.header {
+    border-bottom: 1px solid var(--border);
+    background-color: #f8f9fa;
+}
+
+.tabs {
+    display: flex;
+}
+
+.tab {
+    flex: 1;
+    padding: var(--spacing-md);
+    border: none;
+    background: none;
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+}
+
+.activeTab {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+    background-color: white;
+}
+
+.content {
+    padding: var(--spacing-lg);
+}
+
+/* Seats View */
+.seatsView {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-xl);
+}
+
+.busLayout {
+    border: 2px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    position: relative;
+    background-color: #fff;
+}
+
+.driverCabin {
+    text-align: right;
+    margin-bottom: var(--spacing-lg);
+    padding-right: var(--spacing-md);
+    border-bottom: 1px dashed var(--border);
+    padding-bottom: var(--spacing-md);
+}
+
+.driverIcon {
+    color: var(--text-secondary);
+    transform: rotate(-90deg);
+}
+
+.deck {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+}
+
+.aisle {
+    height: 40px;
+    background-color: #f1f3f4;
+    border-radius: var(--radius-sm);
+    margin: var(--spacing-xs) 0;
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background-color: white;
+    cursor: pointer;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    transition: all 0.2s;
+}
+
+.seat:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.selectedSeat {
+    background-color: var(--success);
+    border-color: var(--success);
+    color: white !important;
+}
+
+.bookingSummary {
+    background-color: #f8f9fa;
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    height: fit-content;
+}
+
+.bookingSummary h3 {
+    margin-bottom: var(--spacing-md);
+    font-size: 1.125rem;
+}
+
+.summaryRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.total {
+    border-top: 1px solid var(--border);
+    padding-top: var(--spacing-md);
+    margin-top: var(--spacing-md);
+    font-weight: 700;
+    color: var(--text-main);
+    font-size: 1rem;
+}
+
+.payBtn {
+    width: 100%;
+    padding: var(--spacing-md);
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    margin-top: var(--spacing-lg);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.payBtn:disabled {
+    background-color: var(--text-secondary);
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* Points View */
+.pointsView {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+}
+
+.pointColumn h3 {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    font-size: 1rem;
+    color: var(--text-main);
+}
+
+.pointList {
+    list-style: none;
+    padding: 0;
+}
+
+.pointItem {
+    display: flex;
+    gap: var(--spacing-md);
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.pointTime {
+    font-weight: 600;
+    color: var(--text-main);
+    min-width: 80px;
+}
+
+.pointName {
+    color: var(--text-secondary);
+}
+
+/* Amenities View */
+.amenitiesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.amenityCard {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    background-color: #f8f9fa;
+    border-radius: var(--radius-sm);
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+    .seatsView {
+        grid-template-columns: 1fr;
+    }
+
+    .pointsView {
+        grid-template-columns: 1fr;
+    }
+}

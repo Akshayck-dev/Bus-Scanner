@@ -1,0 +1,126 @@
+.container {
+    background: #0F172A;
+    /* Dark Slate Background */
+    padding: var(--spacing-md) 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.searchBar {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    height: 56px;
+}
+
+.searchIconBtn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background var(--transition-fast);
+}
+
+.searchIconBtn:hover {
+    background: var(--primary-dark);
+}
+
+.routeSummary {
+    flex: 1;
+    background: #1E293B;
+    /* Slightly lighter slate */
+    height: 40px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    padding: 0 var(--spacing-md);
+    color: var(--text-primary);
+    font-size: 0.9375rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.routeText {
+    font-weight: 500;
+}
+
+.dot {
+    margin: 0 var(--spacing-sm);
+    color: var(--text-tertiary);
+}
+
+.metaText {
+    color: var(--text-secondary);
+}
+
+.dateStepper {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.navBtn {
+    background: #1E293B;
+    border: none;
+    color: var(--text-primary);
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.navBtn:hover:not(:disabled) {
+    background: var(--gray-600);
+}
+
+.navBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.dateDisplay {
+    background: transparent;
+    color: var(--text-primary);
+    font-weight: 500;
+    padding: 0 var(--spacing-md);
+    min-width: 120px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .searchBar {
+        flex-direction: column;
+        height: auto;
+        padding: var(--spacing-md);
+        gap: var(--spacing-sm);
+    }
+
+    .routeSummary {
+        width: 100%;
+        order: 2;
+    }
+
+    .dateStepper {
+        width: 100%;
+        justify-content: space-between;
+        order: 1;
+    }
+
+    .searchIconBtn {
+        display: none;
+        /* Hide on mobile to save space, or move it */
+    }
+}

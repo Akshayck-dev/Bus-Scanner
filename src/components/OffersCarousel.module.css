@@ -1,0 +1,175 @@
+.section {
+    padding: var(--spacing-3xl) 0;
+    background: transparent;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.header {
+    max-width: 1280px;
+    margin: 0 auto var(--spacing-xl);
+    padding: 0 var(--spacing-lg);
+}
+
+.title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.carouselWrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Gradient masks for smooth fade out at edges */
+.carouselWrapper::before,
+.carouselWrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.carouselWrapper::before {
+    left: 0;
+    background: linear-gradient(to right, #0F172A, transparent);
+}
+
+.carouselWrapper::after {
+    right: 0;
+    background: linear-gradient(to left, #0F172A, transparent);
+}
+
+.carouselTrack {
+    display: flex;
+    gap: var(--spacing-lg);
+    width: max-content;
+    animation: scroll 40s linear infinite;
+    padding: var(--spacing-md) 0;
+}
+
+.carouselTrack:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-33.33% - var(--spacing-lg)));
+        /* Move by one set of offers */
+    }
+}
+
+.card {
+    min-width: 320px;
+    height: 180px;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    position: relative;
+    overflow: hidden;
+    color: white;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.3) 100%);
+    transform: skewX(-25deg);
+    transition: all 0.75s;
+    z-index: 1;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover::before {
+    left: 200%;
+}
+
+.cardContent {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.icon {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.chip {
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+}
+
+.offerTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.offerDesc {
+    font-size: 0.875rem;
+    opacity: 0.9;
+    margin-bottom: var(--spacing-xs);
+}
+
+.validity {
+    font-size: 0.75rem;
+    opacity: 0.7;
+}
+
+.circle1,
+.circle2 {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.circle1 {
+    width: 150px;
+    height: 150px;
+    top: -50px;
+    right: -50px;
+}
+
+.circle2 {
+    width: 100px;
+    height: 100px;
+    bottom: -30px;
+    right: 40px;
+}

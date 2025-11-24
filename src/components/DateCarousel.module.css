@@ -1,0 +1,85 @@
+.carouselContainer {
+    width: 100%;
+    overflow-x: auto;
+    padding: var(--spacing-md) 0;
+    margin-bottom: var(--spacing-lg);
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.carouselContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel {
+    display: flex;
+    gap: var(--spacing-sm);
+    min-width: min-content;
+    padding: 0 var(--spacing-sm);
+}
+
+.dateCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: white;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.dateCard:hover:not(.disabled) {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.selected {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.selected .dayName,
+.selected .dayNumber {
+    color: white;
+}
+
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: var(--gray-50);
+}
+
+.dayName {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+.dayNumber {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+    .dateCard {
+        min-width: 80px;
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+
+    .dayName {
+        font-size: 0.75rem;
+    }
+
+    .dayNumber {
+        font-size: 1rem;
+    }
+}

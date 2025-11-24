@@ -1,0 +1,276 @@
+[
+    {
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "aliases": [
+            "Bombay",
+            "BOM",
+            "Mum",
+            "Mumbai"
+        ]
+    },
+    {
+        "city": "Bangalore",
+        "state": "Karnataka",
+        "aliases": [
+            "Bengaluru",
+            "BLR",
+            "Blr",
+            "Bang",
+            "Bangalore"
+        ]
+    },
+    {
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "aliases": [
+            "Madras",
+            "MAA",
+            "Che",
+            "Chennai"
+        ]
+    },
+    {
+        "city": "Delhi",
+        "state": "Delhi",
+        "aliases": [
+            "New Delhi",
+            "DEL",
+            "Delhi",
+            "ND"
+        ]
+    },
+    {
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "aliases": [
+            "Hyd",
+            "HYD",
+            "Hyderabad"
+        ]
+    },
+    {
+        "city": "Pune",
+        "state": "Maharashtra",
+        "aliases": [
+            "Poona",
+            "PNQ",
+            "Pune"
+        ]
+    },
+    {
+        "city": "Kolkata",
+        "state": "West Bengal",
+        "aliases": [
+            "Calcutta",
+            "CCU",
+            "Kol",
+            "Kolkata"
+        ]
+    },
+    {
+        "city": "Jaipur",
+        "state": "Rajasthan",
+        "aliases": [
+            "JAI",
+            "Jaipur"
+        ]
+    },
+    {
+        "city": "Ahmedabad",
+        "state": "Gujarat",
+        "aliases": [
+            "AMD",
+            "Amd",
+            "Ahmedabad"
+        ]
+    },
+    {
+        "city": "Surat",
+        "state": "Gujarat",
+        "aliases": [
+            "STV",
+            "Surat"
+        ]
+    },
+    {
+        "city": "Lucknow",
+        "state": "Uttar Pradesh",
+        "aliases": [
+            "LKO",
+            "Lucknow"
+        ]
+    },
+    {
+        "city": "Kanpur",
+        "state": "Uttar Pradesh",
+        "aliases": [
+            "KNU",
+            "Kanpur"
+        ]
+    },
+    {
+        "city": "Nagpur",
+        "state": "Maharashtra",
+        "aliases": [
+            "NAG",
+            "Nagpur"
+        ]
+    },
+    {
+        "city": "Indore",
+        "state": "Madhya Pradesh",
+        "aliases": [
+            "IDR",
+            "Indore"
+        ]
+    },
+    {
+        "city": "Bhopal",
+        "state": "Madhya Pradesh",
+        "aliases": [
+            "BHO",
+            "Bhopal"
+        ]
+    },
+    {
+        "city": "Visakhapatnam",
+        "state": "Andhra Pradesh",
+        "aliases": [
+            "Vizag",
+            "VTZ",
+            "Visakhapatnam"
+        ]
+    },
+    {
+        "city": "Patna",
+        "state": "Bihar",
+        "aliases": [
+            "PAT",
+            "Patna"
+        ]
+    },
+    {
+        "city": "Vadodara",
+        "state": "Gujarat",
+        "aliases": [
+            "Baroda",
+            "BDQ",
+            "Vadodara"
+        ]
+    },
+    {
+        "city": "Ghaziabad",
+        "state": "Uttar Pradesh",
+        "aliases": [
+            "GZB",
+            "Ghaziabad"
+        ]
+    },
+    {
+        "city": "Ludhiana",
+        "state": "Punjab",
+        "aliases": [
+            "LUH",
+            "Ludhiana"
+        ]
+    },
+    {
+        "city": "Agra",
+        "state": "Uttar Pradesh",
+        "aliases": [
+            "AGR",
+            "Agra"
+        ]
+    },
+    {
+        "city": "Nashik",
+        "state": "Maharashtra",
+        "aliases": [
+            "ISK",
+            "Nashik"
+        ]
+    },
+    {
+        "city": "Varanasi",
+        "state": "Uttar Pradesh",
+        "aliases": [
+            "Benares",
+            "VNS",
+            "Varanasi"
+        ]
+    },
+    {
+        "city": "Coimbatore",
+        "state": "Tamil Nadu",
+        "aliases": [
+            "CJB",
+            "Coimbatore"
+        ]
+    },
+    {
+        "city": "Madurai",
+        "state": "Tamil Nadu",
+        "aliases": [
+            "IXM",
+            "Madurai"
+        ]
+    },
+    {
+        "city": "Kochi",
+        "state": "Kerala",
+        "aliases": [
+            "Cochin",
+            "COK",
+            "Kochi"
+        ]
+    },
+    {
+        "city": "Kozhikode",
+        "state": "Kerala",
+        "aliases": [
+            "Calicut",
+            "CCJ",
+            "Koz",
+            "KZD",
+            "Kozhikode"
+        ]
+    },
+    {
+        "city": "Thiruvananthapuram",
+        "state": "Kerala",
+        "aliases": [
+            "Trivandrum",
+            "TRV",
+            "Tvm",
+            "Thiruvananthapuram"
+        ]
+    },
+    {
+        "city": "Mysore",
+        "state": "Karnataka",
+        "aliases": [
+            "Mysuru",
+            "MYQ",
+            "Mysore"
+        ]
+    },
+    {
+        "city": "Mangalore",
+        "state": "Karnataka",
+        "aliases": [
+            "Mangaluru",
+            "IXE",
+            "Mangalore"
+        ]
+    },
+    {
+        "city": "Goa",
+        "state": "Goa",
+        "aliases": [
+            "Panaji",
+            "GOI",
+            "Goa"
+        ]
+    }
+]
