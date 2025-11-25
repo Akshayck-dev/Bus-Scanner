@@ -1,0 +1,18 @@
+[33mcommit 4d4bfcdcc75ba79f7db3e76890c116f55b4d6096[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: akshay ck <akshayck008@gmail.com>
+Date:   Tue Nov 25 20:32:26 2025 +0530
+
+    Save local changes: update about/faq/offers and add new app routes
+
+src/app/about/page.tsx
+src/app/careers/page.tsx
+src/app/contact/page.tsx
+src/app/faq/page.tsx
+src/app/offers/page.tsx
+src/app/operators/page.tsx
+src/app/press/page.tsx
+src/app/privacy/page.tsx
+src/app/refunds/page.tsx
+src/app/routes/page.tsx
+src/app/sitemap/page.tsx
+src/app/terms/page.tsx
