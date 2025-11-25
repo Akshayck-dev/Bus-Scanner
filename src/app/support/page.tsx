@@ -1,4 +1,10 @@
 import React from 'react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Contact Support - Bus Scanner',
+    description: 'Get in touch with our support team for any assistance.',
+};
 
 export default function SupportPage() {
     return (
