@@ -87,6 +87,8 @@
     font-weight: 500;
     font-size: 0.9375rem;
     transition: color var(--transition-fast);
+    color: var(--text-primary);
+    cursor: pointer;
 }
 
 .secondaryLink:hover {
@@ -98,18 +100,21 @@
     align-items: center;
     gap: 8px;
     padding: 8px 20px;
-    background: #dc2626;
+    background: rgba(255, 255, 255, 0.1);
     color: white;
-    border: none;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 0.9375rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 9999px;
+    font-weight: 500;
+    font-size: 0.9rem;
     cursor: pointer;
-    transition: background-color var(--transition-fast);
+    transition: all 0.2s ease;
+    backdrop-filter: blur(4px);
 }
 
 .loginBtn:hover {
-    background: #b91c1c;
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-1px);
 }
 
 .menuBtn {
@@ -131,5 +136,28 @@
 
     .menuBtn {
         display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .loginBtn {
+        padding: 8px;
+        background: transparent;
+        border: none;
+        border-radius: 50%;
+    }
+
+    .loginBtn:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: none;
+    }
+
+    .loginBtn span {
+        display: none;
+    }
+
+    .loginBtn svg {
+        width: 24px;
+        height: 24px;
     }
 }

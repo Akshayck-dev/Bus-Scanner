@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { Search, MapPin, Calendar, ArrowLeftRight } from 'lucide-react';
+import { Search, MapPin, Calendar, ArrowLeftRight, Minus, Plus } from 'lucide-react';
 import { INDIAN_CITIES } from '@/lib/mockData';
 import { addRecentSearch } from '@/lib/utils/localStorage';
 import RecentSearches from './RecentSearches';
@@ -19,9 +19,12 @@ export default function SearchHero() {
     const [toFocused, setToFocused] = useState(false);
     const [selectedFromIndex, setSelectedFromIndex] = useState(-1);
     const [selectedToIndex, setSelectedToIndex] = useState(-1);
+    const [travellers, setTravellers] = useState(1);
+    const [showTravellerModal, setShowTravellerModal] = useState(false);
 
     const fromInputRef = useRef<HTMLInputElement>(null);
     const toInputRef = useRef<HTMLInputElement>(null);
+    const travellerRef = useRef<HTMLDivElement>(null);
 
     const handleFromChange = (value: string) => {
         setFrom(value);
@@ -107,7 +110,8 @@ export default function SearchHero() {
             const params = new URLSearchParams({
                 from,
                 to,
-                date: searchDate
+                date: searchDate,
+                travellers: travellers.toString()
             });
             router.push(`/search?${params.toString()}`);
         }
@@ -121,6 +125,9 @@ export default function SearchHero() {
             if (!target.closest(`.${styles.searchSection}`)) {
                 setFromSuggestions([]);
                 setToSuggestions([]);
+            }
+            if (travellerRef.current && !travellerRef.current.contains(target)) {
+                setShowTravellerModal(false);
             }
         };
         document.addEventListener('mousedown', handleClickOutside);
@@ -251,9 +258,41 @@ export default function SearchHero() {
                     <div className={styles.divider}></div>
 
                     {/* Travellers Section */}
-                    <div className={styles.searchSection}>
-                        <label className={styles.sectionLabel}>Travellers and cabin class</label>
-                        <div className={styles.valueText}>1 Adult, Economy</div>
+                    <div className={styles.searchSection} ref={travellerRef}>
+                        <label className={styles.sectionLabel}>Travellers</label>
+                        <div
+                            className={styles.valueText}
+                            onClick={() => setShowTravellerModal(!showTravellerModal)}
+                            style={{ cursor: 'pointer' }}
+                        >
+                            {travellers} Adult{travellers > 1 ? 's' : ''}
+                        </div>
+                        {showTravellerModal && (
+                            <div className={styles.travellerModal}>
+                                <div className={styles.travellerRow}>
+                                    <span className={styles.travellerLabel}>Adults</span>
+                                    <div className={styles.counterControls}>
+                                        <button
+                                            type="button"
+                                            onClick={() => setTravellers(Math.max(1, travellers - 1))}
+                                            disabled={travellers <= 1}
+                                            className={styles.counterBtn}
+                                        >
+                                            <Minus size={14} />
+                                        </button>
+                                        <span className={styles.counterValue}>{travellers}</span>
+                                        <button
+                                            type="button"
+                                            onClick={() => setTravellers(Math.min(6, travellers + 1))}
+                                            disabled={travellers >= 6}
+                                            className={styles.counterBtn}
+                                        >
+                                            <Plus size={14} />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
                     </div>
 
                     {/* Search Button */}
