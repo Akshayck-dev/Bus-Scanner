@@ -500,24 +500,9 @@
         display: none;
     }
 
-    .searchSection {
-        flex: 1 1 50%;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .searchBtn {
-        width: 100%;
-        margin: var(--spacing-sm) 0 0 0;
-        height: 56px;
-    }
 }
 
-@media (max-width: 640px) {
-    .searchSection {
-        flex: 1 1 100%;
-    }
-
-    .swapWrapper {
-        display: none;
-    }
+.swapWrapper {
+    display: none;
+}
 }
