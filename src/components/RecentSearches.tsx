@@ -16,7 +16,12 @@ export default function RecentSearches() {
     }, []);
 
     const handleSearch = (search: RecentSearch) => {
-        router.push(`/search?from=${search.from}&to=${search.to}&date=${search.date}`);
+        const params = new URLSearchParams({
+            from: search.from,
+            to: search.to,
+            date: search.date
+        });
+        router.push(`/search?${params.toString()}`);
     };
 
     const handleDelete = (timestamp: number, e: React.MouseEvent) => {

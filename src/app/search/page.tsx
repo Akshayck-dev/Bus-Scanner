@@ -27,6 +27,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
         });
 
     } catch (err) {
+        console.error('Search error:', err);
         error = err instanceof Error ? err.message : 'Failed to fetch bus data';
     }
 
