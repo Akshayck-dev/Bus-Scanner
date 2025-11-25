@@ -43,6 +43,7 @@ export default function SeatMap({ busType, price, onSeatSelect }: SeatMapProps) 
                 });
             }
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         setSeats(generatedSeats);
     }, [busType, price]);
 

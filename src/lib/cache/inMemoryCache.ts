@@ -9,6 +9,7 @@ interface CacheEntry<T> {
 }
 
 class InMemoryCache {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     private cache: Map<string, CacheEntry<any>>;
 
     constructor() {

@@ -23,6 +23,8 @@ export default function SearchResults({ searchData, from, to, date }: SearchResu
     const [seatType, setSeatType] = useState<SeatTypeFilter>('all');
     const [acFilter, setACFilter] = useState<ACFilter>('all');
 
+    const [showFilters, setShowFilters] = useState(false);
+
     const handleTimeChange = (time: string) => {
         setSelectedTimes(prev =>
             prev.includes(time)
@@ -42,7 +44,7 @@ export default function SearchResults({ searchData, from, to, date }: SearchResu
     const filteredAndSortedTrips = useMemo(() => {
         if (!searchData?.results) return [];
 
-        let filtered = searchData.results.filter(trip => {
+        const filtered = searchData.results.filter(trip => {
             // Price filter
             if (trip.best_price > priceRange) return false;
 
@@ -118,7 +120,15 @@ export default function SearchResults({ searchData, from, to, date }: SearchResu
 
     return (
         <div className={`container ${styles.content}`}>
-            <aside className={styles.filters}>
+            {/* Mobile Filter Toggle */}
+            <button
+                className={styles.mobileFilterBtn}
+                onClick={() => setShowFilters(!showFilters)}
+            >
+                {showFilters ? 'Close Filters' : 'Filter & Sort'}
+            </button>
+
+            <aside className={`${styles.filters} ${showFilters ? styles.show : ''}`}>
                 <div className={styles.filterCard}>
                     <div className={styles.filterHeader}>
                         <h3>Filter & Sorting</h3>

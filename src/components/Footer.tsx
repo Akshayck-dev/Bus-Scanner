@@ -13,7 +13,7 @@ export default function Footer() {
                             <span className={styles.logoText}>BusScanner</span>
                         </div>
                         <p className={styles.desc}>
-                            India's fastest growing online bus ticketing platform.
+                            India&apos;s fastest growing online bus ticketing platform.
                             Book tickets for over 2500+ bus operators and 100,000+ routes.
                         </p>
                         <div className={styles.socials}>

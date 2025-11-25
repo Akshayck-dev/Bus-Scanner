@@ -48,7 +48,8 @@ export class MockRedBusConnector extends BaseProviderConnector {
 
     private convertTo24Hour(time12h: string): string {
         const [time, modifier] = time12h.split(' ');
-        let [hours, minutes] = time.split(':');
+        const [rawHours, minutes] = time.split(':');
+        let hours = rawHours;
 
         if (hours === '12') {
             hours = '00';

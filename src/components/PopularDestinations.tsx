@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './PopularDestinations.module.css';
 
 const DESTINATIONS = [
@@ -36,7 +37,7 @@ export default function PopularDestinations() {
                     {DESTINATIONS.map(city => (
                         <div key={city.id} className={styles.card}>
                             <div className={styles.imageWrapper}>
-                                <img src={city.image} alt={city.name} className={styles.image} />
+                                <Image src={city.image} alt={city.name} className={styles.image} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                                 <div className={styles.overlay}></div>
                             </div>
                             <div className={styles.content}>

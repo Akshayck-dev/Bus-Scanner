@@ -1,5 +1,6 @@
 import CompactSearchBar from '@/components/CompactSearchBar';
 import SearchResults from '@/components/SearchResults';
+import { aggregationService } from '@/lib/services/aggregationService';
 import styles from './page.module.css';
 
 interface SearchPageProps {
@@ -18,20 +19,15 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
     let error = null;
 
     try {
-        const apiUrl = `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000'}/api/v1/search?from=${encodeURIComponent(from)}&to=${encodeURIComponent(to)}&date=${date}&passengers=${passengers}`;
-
-        const response = await fetch(apiUrl, {
-            cache: 'no-store' // Don't cache on server side, API has its own cache
+        searchData = await aggregationService.searchBuses({
+            from,
+            to,
+            date,
+            passengers
         });
 
-        if (!response.ok) {
-            throw new Error(`API error: ${response.statusText}`);
-        }
-
-        searchData = await response.json();
     } catch (err) {
         error = err instanceof Error ? err.message : 'Failed to fetch bus data';
-        console.error('Search API error:', err);
     }
 
     return (

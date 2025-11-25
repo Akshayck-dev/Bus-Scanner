@@ -126,8 +126,10 @@ export class RealApiProvider implements BusDataProvider {
      * Transform API response to BusRoute[]
      * TODO: Implement based on your actual API response structure
      */
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     private transformApiBusesToBusRoutes(apiData: any): BusRoute[] {
         // Example transformation - adjust based on your API
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         return apiData.buses?.map((bus: any) => this.transformApiBusToBusRoute(bus)) || [];
     }
 
@@ -135,6 +137,7 @@ export class RealApiProvider implements BusDataProvider {
      * Transform single API bus to BusRoute
      * TODO: Implement based on your actual API response structure
      */
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     private transformApiBusToBusRoute(apiBus: any): BusRoute {
         // Example transformation - adjust based on your API
         return {

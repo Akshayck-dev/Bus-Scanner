@@ -11,6 +11,7 @@ export default function RecentSearches() {
     const router = useRouter();
 
     useEffect(() => {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         setSearches(getRecentSearches());
     }, []);
 
