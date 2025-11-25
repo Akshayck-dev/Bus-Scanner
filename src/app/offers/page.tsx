@@ -1,4 +1,10 @@
 import React from 'react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Offers - Bus Scanner',
+    description: 'Check out the latest offers and deals on bus tickets.',
+};
 
 export default function OffersPage() {
     return (

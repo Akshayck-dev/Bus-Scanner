@@ -1,4 +1,10 @@
 import React from 'react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'About Us - Bus Scanner',
+    description: 'Learn more about Bus Scanner, India\'s fastest growing online bus ticketing platform.',
+};
 
 export default function AboutPage() {
     return (

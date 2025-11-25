@@ -1,4 +1,10 @@
 import React from 'react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'FAQ - Bus Scanner',
+    description: 'Frequently Asked Questions about booking bus tickets on Bus Scanner.',
+};
 
 export default function FAQPage() {
     return (
